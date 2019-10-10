@@ -95,6 +95,9 @@ class testeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $aluno->delete();
+        return [
+            'message' => 'Aluno deleted!'
+        ];
     }
 }

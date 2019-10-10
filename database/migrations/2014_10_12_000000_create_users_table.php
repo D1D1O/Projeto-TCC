@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->integer('matricula')->unique()->nullable();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('password');
+            $table->string('password',60);
             $table->rememberToken();
             $table->timestamps();
         });
