@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Aluno;
 use App\User;
-use App\Professor;
 use Illuminate\Http\Request;
 
-class ProfessorController extends Controller
+class alunController extends Controller
 {
-    //
-    private $professor;
-    private $user;
+     //
+    protected $professor;
+    protected $user;
 
      public function __construct(Professor $professor, User $user){
          $this->$professor = new Professor;
@@ -38,5 +38,4 @@ class ProfessorController extends Controller
         //return view('sistema.Index');
         
     }
-
 }

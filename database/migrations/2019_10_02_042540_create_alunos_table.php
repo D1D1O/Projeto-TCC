@@ -15,11 +15,13 @@ class CreateAlunosTable extends Migration
     {
         Schema::create('alunos', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_user')->unsigned();
+            $table->integer('id_professor')->unsigned()->nullable();
             $table->string('nome',30);
             $table->string('turma',20);
             $table->string('status',20);
-            $table->integer('matricula')->unique();
-            $table->integer('id_professor')->unique();
+
+            $table->foreign('id_user')->references('id')->on('users');
             $table->foreign('id_professor')->references('id')->on('professores');
             $table->timestamps();
         });
