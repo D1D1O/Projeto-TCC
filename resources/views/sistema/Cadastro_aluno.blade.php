@@ -67,7 +67,7 @@
 		</div>
 			<br>
 			<div class="divform"><br>
-				<form method="POST" action="{{ route('store.aluno') }}">
+				<form method="POST" action="{{ route('store') }}">
 				{{ csrf_field() }}
 
 

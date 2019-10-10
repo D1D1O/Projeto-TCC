@@ -12,7 +12,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Auth::routes();
 
-Route::post('/create','AlunoController@create')->name('create');
+Route::post('/create','testeController@store')->name('store');
 
 Route::post('/store','alunController@store')->name('store.aluno');
 

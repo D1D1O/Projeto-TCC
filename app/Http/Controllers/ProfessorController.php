@@ -8,15 +8,8 @@ use Illuminate\Http\Request;
 
 class ProfessorController extends Controller
 {
-    //
-    private $professor;
-    private $user;
-
-     public function __construct(Professor $professor, User $user){
-         $this->$professor = new Professor;
-         $this->$user = new User;
-     }
-
+    
+    
     public function store(Request $request)
     {
        $user = new User;
