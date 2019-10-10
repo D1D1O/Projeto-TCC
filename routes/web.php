@@ -34,3 +34,7 @@ Route::view('/Cadastro_professor', 'sistema/Cadastro_professor')->name('Cadastro
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
