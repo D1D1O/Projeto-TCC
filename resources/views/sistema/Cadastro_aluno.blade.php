@@ -42,7 +42,7 @@
 	align-items: center;
 	background-image: url(imagens/azul2.jpg); 
 	width:400px;
-	height: 400px;
+	height: 428px;
 	margin: 0 auto 0 auto;
 	border-radius: 25px;
 
@@ -67,30 +67,56 @@
 		</div>
 			<br>
 			<div class="divform"><br>
-				<form method="POST" action="{{ route('store') }}">
-				{{ csrf_field() }}
+				<form method="POST" action="{{ route('register') }}">
+				 {{ csrf_field() }}
 
 
 	  				<div class="form-group">
 	  					<p id="fonte">Cadastro de Aluno</p>
-  						<br>
-	    				<div class="Ctext">
-	    				<input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome">
-	    				<small id="emailHelp" class="form-text text-muted"></small>
-	    				</div>
 
+  						<br>
+
+						
+	    				<div class="Ctext">
+
+	    				    <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome" value="{{ old('name') }}">
+	    				     <small id="emailHelp" class="form-text text-muted"></small>
+						       @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+	    				</div>
 	 				</div>
+
 					<div class="form-group">
 						
-						
 	    				<div class="Ctext">
-	    				<input type="text" class="form-control" name="matricula" id="exampleInputPassword1" placeholder="Matricula">
+
+	    				<input type="text" class="form-control" name="matricula" id="exampleInputPassword1" placeholder="Matricula" value="{{ old('matricula') }}">
 	    				</div>
 
 	  				</div>
+					<div class="form-group">
+						
+	    				<div class="Ctext">
+
+	    				<input id="email" type="email" placeholder="Email" class="form-control" name="email" value="{{ old('email') }}" required>
+						       
+							   @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+
+						</div>
+
+	  				</div>
+
+
 	  				<div class="form-group">
 	    				<div class="Ctext">
-	    				<input type="text" class="form-control" name="turma" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Turma">
+	    				<input type="text" class="form-control" name="turma" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Turma" value="{{ old('turma') }}">
 	    				<small id="emailHelp" class="form-text text-muted"></small>
 	    				</div>
 
@@ -100,7 +126,12 @@
 						
 	    				<div class="Ctext">
 	    				<input type="password" class="form-control" name="senha" id="exampleInputPassword1" placeholder="Senha">
-	    				</div>
+	    				        @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+						</div>
 
 	  				</div>
 	  				<div id="fonte">

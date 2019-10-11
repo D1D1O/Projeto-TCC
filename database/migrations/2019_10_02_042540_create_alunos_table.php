@@ -19,7 +19,7 @@ class CreateAlunosTable extends Migration
             $table->integer('id_professor')->unsigned()->nullable();
             $table->string('nome',30);
             $table->string('turma',20);
-            $table->string('status',20);
+            $table->string('status',20)->nullable();
 
             $table->foreign('id_user')->references('id')->on('users');
             $table->foreign('id_professor')->references('id')->on('professores');
