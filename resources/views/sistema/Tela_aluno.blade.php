@@ -5,7 +5,6 @@
 	<head>
 		<meta charset="utf-8">
 
-		
 		<link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 		<style type="text/css">
@@ -29,7 +28,7 @@
 .unip2{
 
 	font-family: 'Oswald', sans-serif;
-	font-size: 15px;
+	font-size: 20px;
 	text-align: center;	
 	width:180px;
 	height:80px;
@@ -63,7 +62,7 @@
 	color: white;
 	text-align:left;
 	padding: 10px;
-	width: 480px;
+	width: 360px;
 	height:65px;
 	margin-left: 10px;
 	background-color: #42474a;
@@ -71,8 +70,21 @@
 	border-top: solid 10px white;
 	 
 }
+.nome3{
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+	color: white;
+	text-align:left;
+	padding: 10px;
+	width: 320px;
+	height:65px;
+	background-color: #42474a;
+	position: relative;
+	border-top: solid 10px white;
+	 
+}
 .nome2{
-	width: 280px;
+	width: 80px;
 	height:65px;
 	background-color:#42474a;
 	position: relative;
@@ -129,12 +141,6 @@
 	float:right;
 }
 
-
-
-
-
-
-
 		</style>
 
 		<title>UniProjetos</title>
@@ -151,18 +157,15 @@
 
 			
 			<div class="unip2">
-			<a href="">Aluno 1 cadastrado</a>
+			<a href="">Orientador</a>
 			</div>
 		
-		
-		<div class="unip2">
-			<a href="">Aluno 2 cadastrado</a>
-		</div>
 
 	</div>
 	
 	<div class="nav">		
-		<span class="nome">Professor:</span>
+		<span class="nome">Aluno:</span>
+		<span class="nome3">Matricula:</span>
 		
 		
 		<span class="nome2">

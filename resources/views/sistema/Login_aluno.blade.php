@@ -80,38 +80,67 @@ body{
 		</div>
 			<br>
 			<div class="divform"><br>
-				<form>
+				<form method="POST" action="{{ route('login') }}">
+                        {{ csrf_field() }}
+
+
 	  				<div class="form-group">
 	  					<p id="fonte">Aluno</p>
   						<br>
-	    				<div class="Ctext">
+                        
+						<div class="Ctext">
+                                <input id="email" type="email" placeholder="Email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+
+	    				<!--<div class="Ctext">
 	    				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Matricula">
 	    				<small id="emailHelp" class="form-text text-muted"></small>
-	    				</div>
+	    				</div>-->
+
 
 	 				</div>
-					<div class="form-group">
+                     
+					 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <!--<label for="password" class="col-md-4 control-label">Password</label>-->
+
+                            <div class="Ctext">
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Senha" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                    </div>
+
+					<!--<div class="form-group">
 						
 						
 	    				<div class="Ctext">
-	    				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+
+	    				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+
 	    				</div>
 
-	  				</div>
+	  				</div>-->
+
 	  				<div id="fonte">
 
-
-					  <a href="{{route('Cadastro_aluno')}}" class="btn btn-primary">
-					    Login
-					  </a>
-					
+					  <button type="submit" class="btn btn-primary">
+                                    Login
+                      </button>
                     
-
-					<a href="{{route('Cadastro_aluno')}}" class="btn btn-primary">
+					   <a href="{{route('Cadastro_aluno')}}" class="btn btn-primary">
 						Cadastre-se
-				    </a>
-                   
-				</div>
+				       </a>
+				    </div>
 			</form>
 		</div>
 	</div>

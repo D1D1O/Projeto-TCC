@@ -42,7 +42,7 @@
 	align-items: center;
 	background-image: url(imagens/azul2.jpg); 
 	width:400px;
-	height: 428px;
+	height: 486px;
 	margin: 0 auto 0 auto;
 	border-radius: 25px;
 
@@ -67,6 +67,8 @@
 		</div>
 			<br>
 			<div class="divform"><br>
+
+			
 				<form method="POST" action="{{ route('register') }}">
 				 {{ csrf_field() }}
 
@@ -124,21 +126,40 @@
 					<div class="form-group">
 						
 						
-	    				<div class="Ctext">
-	    				<input type="password" class="form-control" name="senha" id="exampleInputPassword1" placeholder="Senha">
+	    			<div class="Ctext">
+	    				<input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Senha">
 	    				        @if ($errors->has('password'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
 						</div>
-
+						<INPUT TYPE="hidden" NAME="tipo" VALUE="aluno">
 	  				</div>
+
+					  <div class="form-group">
+	    				<div class="Ctext">
+						   <input id="password-confirm"  placeholder="Confirmar Senha" type="password" class="form-control" name="password_confirmation" required>
+	    				<small id="emailHelp" class="form-text text-muted"></small>
+	    			 </div>
+
+	 				</div>
+
+
 	  				<div id="fonte">
 					<button type="submit" class="btn btn-primary">Cadastrar</button>
 					</div>
 					
 				</form>
+				@if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                         @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                         @endforeach
+                        </ul>
+                    </div>
+                @endif
 			</div>
 	</div>
 

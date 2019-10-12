@@ -28,6 +28,9 @@ Route::view('/Cadastro_aluno', 'sistema/Cadastro_aluno')->name('Cadastro_aluno')
 Route::view('/Login_professor', 'sistema/Login_professor')->name('Login_professor');
 Route::view('/Cadastro_professor', 'sistema/Cadastro_professor')->name('Cadastro_professor');
 
+Route::view('/t1', 'sistema/Tela_aluno')->name('t1');
+Route::view('/t2', 'sistema/Tela_professor')->name('t2');
+
 
 
 

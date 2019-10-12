@@ -53,7 +53,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'senha' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:6|confirmed',
         ] , $messages);
     }
 
@@ -74,7 +74,8 @@ class RegisterController extends Controller
         $user = new User;
         $user->name = $data['name'];
         $user->email = $data['email'];
-        $user->password = bcrypt($data['senha']);
+        $user->matricula = $data['matricula'];
+        $user->password = bcrypt($data['password']);
 
         $user->save();
 
@@ -82,7 +83,25 @@ class RegisterController extends Controller
        
 
         
+        if($data['tipo'] == 'aluno'){
 
+            $aluno = new Aluno;
+
+            $aluno->id_user = $user->id;
+            $aluno->nome =  $data['name'];
+            $aluno->turma =  $data['turma'];
+            $aluno->save();
+        }
+
+        if($data['tipo'] == 'professor'){
+
+            $aluno = new Professor;
+
+            $aluno->id_user = $user->id;
+            $aluno->nome =  $data['name'];
+            $aluno->turma =  $data['turma'];
+            $aluno->save();
+        }
 
 
 
