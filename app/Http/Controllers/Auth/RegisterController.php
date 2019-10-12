@@ -47,14 +47,14 @@ class RegisterController extends Controller
             'password.required' => 'informe uma senha valida',
             'password.min' => 'Minimo 6 digitos',
             'password.required' => 'informe uma senha valida',
-            
+
         ];
 
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-        ] , $messages);
+        ], $messages);
     }
 
     /**
@@ -65,7 +65,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-       /* return User::create([
+        /* return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
@@ -80,10 +80,10 @@ class RegisterController extends Controller
         $user->save();
 
 
-       
 
-        
-        if($data['tipo'] == 'aluno'){
+
+
+        if ($data['tipo'] == 'aluno') {
 
             $aluno = new Aluno;
 
@@ -91,16 +91,21 @@ class RegisterController extends Controller
             $aluno->nome =  $data['name'];
             $aluno->turma =  $data['turma'];
             $aluno->save();
+
+            return $user;
         }
 
-        if($data['tipo'] == 'professor'){
+        if ($data['tipo'] == 'professor') {
 
-            $aluno = new Professor;
+            $professor = new Professor;
 
-            $aluno->id_user = $user->id;
-            $aluno->nome =  $data['name'];
-            $aluno->turma =  $data['turma'];
-            $aluno->save();
+            $professor->id_user = $user->id;
+            $professor->nome =  $data['name'];
+            $professor->descricao =  $data['descricao'];
+            $professor->save();
+
+            return $user;return $user;
+
         }
 
 
@@ -109,8 +114,6 @@ class RegisterController extends Controller
 
 
 
-        return $user;
         
-
     }
 }

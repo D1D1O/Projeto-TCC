@@ -56,18 +56,25 @@ body{
 #btn1{
 	 
 }
+div.alert.alert-succes{
+	text-align: center;
+}
+.central{
+	text-align: center;
+}
+
 	</style>
 
 </head>
 <body>
 
 @if(empty($matricula))
-  <div class="alert alert-success">
+  <div id="central" class="alert alert-success central">
                            Bem Vindo
   </div>
   
 @else
-  <div class="alert alert-success">
+  <div id="central2" class="alert alert-success central">
     Sua matricula para acesso ao sistema é :  {{$matricula}}.
   </div>
 @endif
