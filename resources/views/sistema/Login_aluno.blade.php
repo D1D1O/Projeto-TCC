@@ -7,7 +7,7 @@
 	
 	<link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
-	
+	<link href="{{ asset('css/Login_aluno.css') }}" rel="stylesheet">
 	<title>Login Aluno</title>
 
 	<style>
@@ -146,9 +146,21 @@ div.alert.alert-succes{
                     
 					   <a href="{{route('Cadastro_aluno')}}" class="btn btn-primary">
 						Cadastre-se
-				       </a>
+					   </a>
+					   <INPUT TYPE="hidden" NAME="tipo" VALUE="aluno">
 				    </div>
 			</form>
+
+			@if ($errors->any())
+			<div class="alert alert-danger">
+				<ul>
+					@foreach ($errors->all() as $error)
+					<li>{{ $error }}</li>
+					@endforeach
+				</ul>
+			</div>
+			@endif
+			
 		</div>
 	</div>
 

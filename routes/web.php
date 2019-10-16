@@ -13,7 +13,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/create','testeController@store')->name('store');
 
-Route::post('/store','alunController@store')->name('store.aluno');
+Route::post('/store','AlunoController@store')->name('store.aluno');
 
 Route::post('/store/professor','ProfessorController@store')->name('store.professor');
 

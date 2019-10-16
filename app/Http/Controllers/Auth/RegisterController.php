@@ -19,7 +19,8 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    //protected $redirectTo = '/home';
+    protected $redirectTo ;
 
     /**
      * Create a new controller instance.
@@ -63,7 +64,7 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create(array $data )
     {
         /* return User::create([
             'name' => $data['name'],
@@ -91,6 +92,7 @@ class RegisterController extends Controller
             $aluno->nome =  $data['name'];
             $aluno->turma =  $data['turma'];
             $aluno->save();
+            $this->redirectTo = '/t1';
 
             return $user;
         }
@@ -103,8 +105,11 @@ class RegisterController extends Controller
             $professor->nome =  $data['name'];
             $professor->descricao =  $data['descricao'];
             $professor->save();
+            
+            $this->redirectTo = '/t1';
+            //$this->redirectTo = '/t2';
 
-            return $user;return $user;
+            return $user;
 
         }
 
