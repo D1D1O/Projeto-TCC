@@ -130,6 +130,7 @@
 						@endif
 					</div>
 				</div>
+				<INPUT TYPE="hidden" NAME="tipo" VALUE="aluno">
 
 				<!--<div class="form-group">
 						

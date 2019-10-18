@@ -77,6 +77,7 @@ trait ThrottlesLogins
         event(new Lockout($request));
     }
 
+
     /**
      * Get the throttle key for the given request.
      *
@@ -117,4 +118,5 @@ trait ThrottlesLogins
     {
         return property_exists($this, 'decayMinutes') ? $this->decayMinutes : 1;
     }
+    
 }

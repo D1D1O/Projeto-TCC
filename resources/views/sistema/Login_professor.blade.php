@@ -132,6 +132,7 @@
 						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
 					</div>
 				</div>-->
+				<INPUT TYPE="hidden" NAME="tipo" VALUE="professor">
 
 				<div id="fonte">
 

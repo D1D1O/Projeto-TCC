@@ -30,6 +30,7 @@ trait AuthenticatesUsers
     public function login(Request $request)
     {
         $this->validateLogin($request);
+        $this->localRedirect($request);
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
         // the login attempts for this application. We'll key this by the username and
@@ -51,6 +52,7 @@ trait AuthenticatesUsers
 
         return $this->sendFailedLoginResponse($request);
     }
+
 
     /**
      * Validate the user login request.
@@ -169,5 +171,14 @@ trait AuthenticatesUsers
     protected function guard()
     {
         return Auth::guard();
+    }
+
+    protected function localRedirect(Request $request)
+    {
+        if($request->tipo == 'aluno'){
+            $this->redirectTo = '/t1';
+        }else{
+            $this->redirectTo = '/t2';
+        }
     }
 }
