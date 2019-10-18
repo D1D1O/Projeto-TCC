@@ -174,6 +174,7 @@
 		</div>
 
 		<div class="nav">
+
 			<span class="nome">Aluno: <?php echo e(Auth::user()->name); ?></span>
 			<span class="nome3">Matricula: <?php echo e(Auth::user()->matricula); ?> </span>
 
@@ -188,7 +189,7 @@
 				</a>-->
 
 				<a href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();" class="btn btn-primary" id="sair">
+                        document.getElementById('logout-form').submit();" class="btn btn-primary" id="sair">
 					Sair
 				</a>
 				<form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
