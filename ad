@@ -1,0 +1,53 @@
+[33mcommit ce3b402f212c0d63db6946d34d49dabd65074ffa[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: Giovanny Lima <didiosilva@gmail.com>
+Date:   Sat Oct 12 14:06:35 2019 -0400
+
+    cadastro e login de aluno e professor funcionando.
+
+[33mcommit e166959d6cf0e4f947156b77e3f3d08fe34c3ad6[m
+Author: Giovanny Lima <didiosilva@gmail.com>
+Date:   Sat Oct 12 11:59:38 2019 -0400
+
+    cadastro aluno e login funcionando
+
+[33mcommit 03d6808be73c4e5474eef3cc2f84f13d46f80362[m
+Author: Giovanny Lima <didiosilva@gmail.com>
+Date:   Thu Oct 10 22:09:42 2019 -0400
+
+     Realizado validação na cadastro aluno
+
+[33mcommit a6db3f0b18ce19da8edaa4ddef0069b054825b40[m
+Author: Giovanny Lima <didiosilva@gmail.com>
+Date:   Thu Oct 10 13:35:28 2019 -0400
+
+    feito alterações no arquivo app\Http\Auth\RegisterController
+
+[33mcommit 0e6ec260145c880bf98b02a86d066b24a8798a77[m
+Author: Giovanny Lima <didiosilva@gmail.com>
+Date:   Thu Oct 10 12:55:52 2019 -0400
+
+    Foi executado o codigo php atrisan make:auth para criar as rotas e viws de atenticação.
+
+[33mcommit 6c2257365c6f861cd1335c212c35992b13726ce9[m
+Author: Giovanny Lima <didiosilva@gmail.com>
+Date:   Thu Oct 10 12:51:30 2019 -0400
+
+    funcional
+
+[33mcommit c9cbf0507095f9f6b656a4f5254031eedfbf3cba[m
+Author: Giovanny Lima <didiosilva@gmail.com>
+Date:   Wed Oct 9 22:19:22 2019 -0400
+
+    cadatrando professor e  aluno
+
+[33mcommit 247a995017e84809e95d2455c1425a8b22bb1c7a[m
+Author: Giovanny Lima <didiosilva@gmail.com>
+Date:   Wed Oct 9 21:56:19 2019 -0400
+
+    cadatrando professor porém erro no aluno
+
+[33mcommit a33dcd779bde983e4cb4f4d681ab722e2fbebcf8[m
+Author: Giovanny Lima <didiosilva@gmail.com>
+Date:   Wed Oct 2 13:03:40 2019 -0400
+
+    Commit inicial

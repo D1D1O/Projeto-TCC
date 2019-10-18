@@ -3,8 +3,11 @@
 
 
 Route::get('/', function () {
-    return view('sistema.Index');
+  return view('sistema.Index');
+    //return view('welcome');
 });
+
+
 
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -13,7 +16,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/create','testeController@store')->name('store');
 
-Route::post('/store','alunController@store')->name('store.aluno');
+//ute::post('/store','alunController@store')->name('store.aluno');
 
 Route::post('/store/professor','ProfessorController@store')->name('store.professor');
 
