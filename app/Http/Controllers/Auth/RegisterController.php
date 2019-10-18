@@ -19,7 +19,8 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    //protected $redirectTo = '/home';
+    protected $redirectTo ;
 
     /**
      * Create a new controller instance.
@@ -45,7 +46,7 @@ class RegisterController extends Controller
             'email.required'    => 'Informe seu Email',
             'email.unique'    => 'Este email já esta cadastrado em nosso sistema.',
             'password.required' => 'informe uma senha valida',
-            'password.min' => 'Minimo 6 digitos',
+            'password.min' => 'Senha deve ter no mínimo 6 digitos',
             'password.required' => 'informe uma senha valida',
             
         ];
@@ -76,40 +77,27 @@ class RegisterController extends Controller
         $user->email = $data['email'];
         $user->matricula = $data['matricula'];
         $user->password = bcrypt($data['password']);
-
         $user->save();
-
-
-       
-
-        
-        if($data['tipo'] == 'aluno'){
-
+        if ($data['tipo'] == 'aluno') {
             $aluno = new Aluno;
-
             $aluno->id_user = $user->id;
             $aluno->nome =  $data['name'];
             $aluno->turma =  $data['turma'];
             $aluno->save();
+            $this->redirectTo = '/t1';
+            return $user;
         }
-
-        if($data['tipo'] == 'professor'){
-
-            $aluno = new Professor;
-
-            $aluno->id_user = $user->id;
-            $aluno->nome =  $data['name'];
-            $aluno->turma =  $data['turma'];
-            $aluno->save();
+        if ($data['tipo'] == 'professor') {
+            $professor = new Professor;
+            $professor->id_user = $user->id;
+            $professor->nome =  $data['name'];
+            $professor->descricao =  $data['descricao'];
+            $professor->save();
+            
+            $this->redirectTo = '/t2';
+            //$this->redirectTo = '/t2';
+            return $user;
         }
-
-
-
-
-
-
-
-        return $user;
         
 
     }
