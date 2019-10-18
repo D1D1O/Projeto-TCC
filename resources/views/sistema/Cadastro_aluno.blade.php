@@ -83,11 +83,7 @@
 
 	    				    <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome" value="{{ old('name') }}">
 	    				     <small id="emailHelp" class="form-text text-muted"></small>
-						       @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
+						      
 	    				</div>
 	 				</div>
 
@@ -105,11 +101,7 @@
 
 	    				<input id="email" type="email" placeholder="Email" class="form-control" name="email" value="{{ old('email') }}" required>
 						       
-							   @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
+							 
 
 						</div>
 
@@ -128,11 +120,7 @@
 						
 	    			<div class="Ctext">
 	    				<input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Senha">
-	    				        @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
+	    				       
 						</div>
 						<INPUT TYPE="hidden" NAME="tipo" VALUE="aluno">
 	  				</div>
