@@ -130,6 +130,7 @@
 				</div>
 				<div id="fonte">
 					<INPUT TYPE="hidden" NAME="tipo" VALUE="professor">
+					
 					<button type="submit" class="btn btn-primary">Cadastrar</button>
 				</div>
 			</form>

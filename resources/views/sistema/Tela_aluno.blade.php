@@ -1,201 +1,228 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
-	
-	<head>
-		<meta charset="utf-8">
 
-		<link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-		<style type="text/css">
-			body{
-	background-image: url(imagens/azul.jpg);
-}
-.unip{
+<head>
+	<meta charset="utf-8">
 
-	font-family: 'Oswald', sans-serif;
-	font-size: 30px;
-	text-align: center;	
-	width:180px;
-	height:80px;
-	padding: 10px;
-	background-color: #dcd7d4;
-	position: relative;
-	border-left: solid 10px white;
-	margin: 0px 10px 10px 0px;
-}
+	<link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body {
+			background-image: url(imagens/azul.jpg);
+		}
 
-.unip2{
+		.unip {
 
-	font-family: 'Oswald', sans-serif;
-	font-size: 20px;
-	text-align: center;	
-	width:180px;
-	height:80px;
-	padding: 10px;
-	background-color: #dcd7d4;
-	position: relative;
-	margin-bottom: 10px;
-	border-left: solid 10px black;
-		
-}
-.unip2:hover{
+			font-family: 'Oswald', sans-serif;
+			font-size: 30px;
+			text-align: center;
+			width: 180px;
+			height: 80px;
+			padding: 10px;
+			background-color: #dcd7d4;
+			position: relative;
+			border-left: solid 10px white;
+			margin: 0px 10px 10px 0px;
+		}
 
-	transform:scale(1.1);
-	transition: all 0.15s linear;
+		.unip2 {
 
-}
+			font-family: 'Oswald', sans-serif;
+			font-size: 20px;
+			text-align: center;
+			width: 180px;
+			height: 80px;
+			padding: 10px;
+			background-color: #dcd7d4;
+			position: relative;
+			margin-bottom: 10px;
+			border-left: solid 10px black;
 
-.nav{
-	width: 800px;
-	height:80px;
-	background-color:#6692b3;
-	position: relative;
-	padding: 10px;
-	left: 200px;
+		}
+
+		.unip2:hover {
+
+			transform: scale(1.1);
+			transition: all 0.15s linear;
+
+		}
+
+		.nav {
+			width: 800px;
+			height: 80px;
+			background-color: #6692b3;
+			position: relative;
+			padding: 10px;
+			left: 200px;
 
 
-}
-.nome{
-	font-family: 'Oswald', sans-serif;
-	font-size: 20px;
-	color: white;
-	text-align:left;
-	padding: 10px;
-	width: 360px;
-	height:65px;
-	margin-left: 10px;
-	background-color: #42474a;
-	position: relative;
-	border-top: solid 10px white;
-	 
-}
-.nome3{
-	font-family: 'Oswald', sans-serif;
-	font-size: 20px;
-	color: white;
-	text-align:left;
-	padding: 10px;
-	width: 320px;
-	height:65px;
-	background-color: #42474a;
-	position: relative;
-	border-top: solid 10px white;
-	 
-}
-.nome2{
-	width: 80px;
-	height:65px;
-	background-color:#42474a;
-	position: relative;
-	border-top: solid 10px white;
-		
-}
-.principal{
-	max-width:1000px;
-	height:1000px;
-	margin: 0 auto 0 auto;
-	background-color: yellow;
-	position: relative; 
-}
-.left{
-	background-color:#1670a7;
-	width: 200px;
-	height: 100%;
-	padding: 10px;
-	position: absolute;
-	left: 0;  
-}
-.chat{
-	background-color:#959a9c;	
-	width:800px;
-	height:721px; 
-	float: right;	
-}
-.chat2{
-	background-color: white;
-	width:770px;
-	height: 690px;
-	position: relative;
-	left:14px;
-	top:14px;     
+		}
 
-}
-.text{
-    background:#6692b3;   
-    width: 800px;
-    height: 199px;    
-    position: relative;
-    left: 200px;
-    clear: both;
+		.nome {
+			font-family: 'Oswald', sans-serif;
+			font-size: 20px;
+			color: white;
+			text-align: left;
+			padding: 10px;
+			width: 360px;
+			height: 65px;
+			margin-left: 10px;
+			background-color: #42474a;
+			position: relative;
+			border-top: solid 10px white;
 
-}
-.mensagem{
-	font-family: Andale Mono, monospace;
-	font-size:20px;
-	color:white;  
-}
+		}
 
-#sair{
+		.nome3 {
+			font-family: 'Oswald', sans-serif;
+			font-size: 20px;
+			color: white;
+			text-align: left;
+			padding: 10px;
+			width: 320px;
+			height: 65px;
+			background-color: #42474a;
+			position: relative;
+			border-top: solid 10px white;
 
-	float:right;
-}
+		}
 
-		</style>
+		.nome2 {
+			width: 80px;
+			height: 65px;
+			background-color: #42474a;
+			position: relative;
+			border-top: solid 10px white;
 
-		<title>UniProjetos</title>
-	</head>
+		}
 
-	
-	<body>
+		.principal {
+			max-width: 1000px;
+			height: 1000px;
+			margin: 0 auto 0 auto;
+			background-color: yellow;
+			position: relative;
+		}
+
+		.left {
+			background-color: #1670a7;
+			width: 200px;
+			height: 100%;
+			padding: 10px;
+			position: absolute;
+			left: 0;
+		}
+
+		.chat {
+			background-color: #959a9c;
+			width: 800px;
+			height: 721px;
+			float: right;
+		}
+
+		.chat2 {
+			background-color: white;
+			width: 770px;
+			height: 690px;
+			position: relative;
+			left: 14px;
+			top: 14px;
+
+		}
+
+		.text {
+			background: #6692b3;
+			width: 800px;
+			height: 199px;
+			position: relative;
+			left: 200px;
+			clear: both;
+
+		}
+
+		.mensagem {
+			font-family: Andale Mono, monospace;
+			font-size: 20px;
+			color: white;
+		}
+
+		#sair {
+
+			float: right;
+		}
+	</style>
+
+	<title>UniProjetos</title>
+</head>
+
+
+<body>
 	<div class="principal">
-	
-	
-	<div class="left">
 
-		<div class="unip">UniProjetos</div>
 
-			
+		<div class="left">
+
+			<div class="unip">UniProjetos</div>
+
+
 			<div class="unip2">
-			<a href="">Orientador</a>
+				<a href="">Orientador</a>
 			</div>
-		
 
-	</div>
-	
-	<div class="nav">		
-		<span class="nome">Aluno:</span>
-		<span class="nome3">Matricula:</span>
-		
-		
-		<span class="nome2">
-			<a href="index.html" class="btn btn-primary" id="sair">	
-				Sair
-			</a>
-		</span>		
-		
-	</div>
 
-	<div class="chat">
-		<div class="chat2">
-			
 		</div>
-					
+
+		<div class="nav">
+
+			<span class="nome">Aluno: {{ Auth::user()->name }}</span>
+			<span class="nome3">Matricula: {{ Auth::user()->matricula }} </span>
+
+			
+
+
+
+			<span class="nome2">
+
+				<!--<a href="index.html" class="btn btn-primary" id="sair">
+					Sair
+				</a>-->
+
+				<a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();" class="btn btn-primary" id="sair">
+					Sair
+				</a>
+				<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+					{{ csrf_field() }}
+				</form>
+
+
+
+			</span>
+
+		</div>
+
+		<div class="chat">
+			<div class="chat2">
+
+			</div>
+
+		</div>
+
+		<div class="text">
+
+			<center class="mensagem">Mensagem:</center>
+			<center><textarea class="msg" cols="80" rows="3"></textarea></center>
+
+			<center><input id="file" name="file" type="file" class="btn btn-light" />&nbsp;&nbsp;<button class="btn btn-light">Enviar</button></center>
+
+
+		</div>
+
+
+
 	</div>
 
-	<div class="text">
-						
-		<center class="mensagem">Mensagem:</center><center><textarea class="msg" cols="80" rows="3"></textarea></center>
-		
-		<center><input id="file" name="file" type="file" class="btn btn-light"/>&nbsp;&nbsp;<button class="btn btn-light">Enviar</button></center>
-						
-						
-	</div>
-
-	
-		
-	</div>
-	
 
 
 
@@ -205,4 +232,4 @@
 
 
 
-	</body>
+</body>
