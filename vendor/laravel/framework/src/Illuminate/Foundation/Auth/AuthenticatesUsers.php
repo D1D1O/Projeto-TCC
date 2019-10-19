@@ -181,4 +181,6 @@ trait AuthenticatesUsers
             $this->redirectTo = '/t2';
         }
     }
+
+    
 }
