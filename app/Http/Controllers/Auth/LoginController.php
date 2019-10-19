@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
-use App\Http\Controllers\Controller;
+
+use App\Aluno;
+use App\Professor;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -30,17 +34,9 @@ class LoginController extends Controller
      *
      * @var string
      */
+    //protected $redirectTo = '/t2';
+     protected $redirectTo;
 
-     // ;
-     //protected $redirectTo = '/';
-     //protected $redirectTo = $this->tipo == "aluno" ? '/t1' : '/t2' ;    
-
-     protected $redirectTo = '/home' ;
-
-
-
-     
-    
 
     /**
      * Create a new controller instance.

@@ -73,6 +73,7 @@
 		<div class="nav">
 			<div class="divuni"><img src="imagens/Uninorte.jpg"></div>
 		</div>
+<<<<<<< HEAD
 		<br>
 		<div class="divform"><br>
 
@@ -119,6 +120,79 @@
 						</span>
 						@endif
 
+=======
+			<br>
+			<div class="divform"><br>
+
+			
+				<form method="POST" action="{{ route('register') }}">
+				 {{ csrf_field() }}
+
+
+	  				<div class="form-group">
+	  					<p id="fonte">Cadastro de Aluno</p>
+
+  						<br>
+
+						
+	    				<div class="Ctext">
+
+	    				    <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome" value="{{ old('name') }}">
+	    				     <small id="emailHelp" class="form-text text-muted"></small>
+						      
+	    				</div>
+	 				</div>
+
+					<div class="form-group">
+						
+	    				<div class="Ctext">
+
+	    				<input type="text" class="form-control" name="matricula" id="exampleInputPassword1" placeholder="Matricula" value="{{ old('matricula') }}">
+	    				</div>
+
+	  				</div>
+					<div class="form-group">
+						
+	    				<div class="Ctext">
+
+	    				<input id="email" type="email" placeholder="Email" class="form-control" name="email" value="{{ old('email') }}" required>
+						       
+							 
+
+						</div>
+
+	  				</div>
+
+
+	  				<div class="form-group">
+	    				<div class="Ctext">
+	    				<input type="text" class="form-control" name="turma" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Turma" value="{{ old('turma') }}">
+	    				<small id="emailHelp" class="form-text text-muted"></small>
+	    				</div>
+
+	 				</div>
+					<div class="form-group">
+						
+						
+	    			<div class="Ctext">
+	    				<input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Senha">
+	    				       
+						</div>
+						<INPUT TYPE="hidden" NAME="tipo" VALUE="aluno">
+	  				</div>
+
+					  <div class="form-group">
+	    				<div class="Ctext">
+						   <input id="password-confirm"  placeholder="Confirmar Senha" type="password" class="form-control" name="password_confirmation" required>
+	    				<small id="emailHelp" class="form-text text-muted"></small>
+	    			 </div>
+
+	 				</div>
+
+
+	  				<div id="fonte">
+					<button type="submit" class="btn btn-primary">Cadastrar</button>
+>>>>>>> desenvolvimento
 					</div>
 
 				</div>

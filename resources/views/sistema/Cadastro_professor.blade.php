@@ -17,31 +17,46 @@
 			width: 100%;
 			height: 100%;
 		}
+<<<<<<< HEAD
 
 		.centertext {
 			margin: 0 auto 0 auto;
 		}
 
+=======
+		.centertext {
+			margin: 0 auto 0 auto;
+		}
+>>>>>>> desenvolvimento
 		#fonte {
 			font-family: FreeMono, monospace;
 			font-size: 20px;
 			color: white;
 			text-align: center;
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> desenvolvimento
 		#fonte2 {
 			font-family: FreeMono, monospace;
 			font-size: 20px;
 			color: white;
 			margin-left: 15px;
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> desenvolvimento
 		.nav {
 			background-color: ;
 			width: 100%;
 			height: 120px;
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> desenvolvimento
 		.divform {
 			align-items: center;
 			background-image: url(imagens/azul2.jpg);
@@ -49,6 +64,7 @@
 			height: 556px;
 			margin: 0 auto 0 auto;
 			border-radius: 25px;
+<<<<<<< HEAD
 
 		}
 
@@ -56,6 +72,12 @@
 			margin: 0 auto 0 auto;
 		}
 
+=======
+		}
+		.divuni {
+			margin: 0 auto 0 auto;
+		}
+>>>>>>> desenvolvimento
 		.Ctext {
 			margin-left: 15px;
 			margin-right: 15px;
@@ -82,6 +104,7 @@
 					<div class="Ctext">
 						<input type="text" class="form-control" id="Inputnome" aria-describedby="nomeHelp" placeholder="Nome" name="name">
 
+<<<<<<< HEAD
 					</div>
 
 				</div>
@@ -108,6 +131,30 @@
 					</div>
 
 				</div>
+=======
+					</div>
+
+				</div>
+				<div class="form-group">
+
+					<div class="Ctext">
+						<input type="text" class="form-control" id="InputMatricula" name="matricula" placeholder="Matricula">
+					</div>
+
+				</div>
+
+				<div class="form-group">
+
+					<div class="Ctext">
+
+						<input id="email" type="email" placeholder="Email" class="form-control" name="email" value="{{ old('email') }}" required>
+
+					
+
+					</div>
+
+				</div>
+>>>>>>> desenvolvimento
 
 				<div class="form-group">
 
@@ -141,9 +188,25 @@
 				</div>
 				<div id="fonte">
 					<INPUT TYPE="hidden" NAME="tipo" VALUE="professor">
+<<<<<<< HEAD
 					<button type="submit" class="btn btn-primary">Cadastrar</button>
 				</div>
 			</form>
+=======
+					
+					<button type="submit" class="btn btn-primary">Cadastrar</button>
+				</div>
+			</form>
+			@if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                         @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                         @endforeach
+                        </ul>
+                    </div>
+                @endif
+>>>>>>> desenvolvimento
 		</div>
 	</div>
 

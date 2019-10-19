@@ -18,31 +18,46 @@
 			width: 100%;
 			height: 100%;
 		}
+<<<<<<< HEAD
 
 		.centertext {
 			margin: 0 auto 0 auto;
 		}
 
+=======
+		.centertext {
+			margin: 0 auto 0 auto;
+		}
+>>>>>>> desenvolvimento
 		#fonte {
 			font-family: FreeMono, monospace;
 			font-size: 20px;
 			color: white;
 			text-align: center;
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> desenvolvimento
 		#fonte2 {
 			font-family: FreeMono, monospace;
 			font-size: 20px;
 			color: white;
 			margin-left: 15px;
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> desenvolvimento
 		.nav {
 			background-color: ;
 			width: 100%;
 			height: 120px;
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> desenvolvimento
 		.divform {
 			align-items: center;
 			background-image: url(imagens/azul2.jpg);
@@ -50,6 +65,7 @@
 			height: 300px;
 			margin: 0 auto 0 auto;
 			border-radius: 25px;
+<<<<<<< HEAD
 
 		}
 
@@ -57,15 +73,27 @@
 			margin: 0 auto 0 auto;
 		}
 
+=======
+		}
+		.divuni {
+			margin: 0 auto 0 auto;
+		}
+>>>>>>> desenvolvimento
 		.Ctext {
 			margin-left: 15px;
 			margin-right: 15px;
 		}
+<<<<<<< HEAD
 
 		div.alert.alert-succes {
 			text-align: center;
 		}
 
+=======
+		div.alert.alert-succes {
+			text-align: center;
+		}
+>>>>>>> desenvolvimento
 		.central {
 			text-align: center;
 		}
@@ -138,12 +166,20 @@
                 </div>
 
 				<!--<div class="form-group">
+<<<<<<< HEAD
 
 					<div class="Ctext">
 						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
 					</div>
 
 				</div>-->
+=======
+					<div class="Ctext">
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+					</div>
+				</div>-->
+				<INPUT TYPE="hidden" NAME="tipo" VALUE="professor">
+>>>>>>> desenvolvimento
 
 				<div id="fonte">
 
