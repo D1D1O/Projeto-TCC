@@ -176,7 +176,7 @@ trait AuthenticatesUsers
     protected function localRedirect(Request $request)
     {
         if($request->tipo == 'aluno'){
-            $this->redirectTo = '/t1';
+            $this->redirectTo = '/home';
         }else{
             $this->redirectTo = '/t2';
         }
