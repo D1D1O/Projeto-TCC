@@ -193,6 +193,26 @@
         <?php echo $__env->yieldContent('content'); ?>
     </div>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+
+    var receiver_id = '';
+    var my_id = '<?php echo e(Auth::id()); ?>';
+    $(document).ready(function() {
+        $('.user').click(function() {
+            $('.user').removeClass('active');
+            $(this).addClass('active');
+
+            receiver_id = $(this).attr('id');
+            alert(receiver_id);
+        })
+    })
+
+</script>
+
+
     <!-- Scripts -->
     <script src="<?php echo e(asset('js/app.js')); ?>"></script>
 </body>
