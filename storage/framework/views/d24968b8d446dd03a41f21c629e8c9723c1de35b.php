@@ -275,6 +275,7 @@
                             <p class="date">1 Sep, 2019</p>
                         </div>
                     </li>
+                    
                     <li class="message" clearfix>
                         <div class="received">
                             <p>Lorem received dolor.</p>

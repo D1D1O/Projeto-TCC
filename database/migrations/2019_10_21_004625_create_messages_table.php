@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMensagensTable extends Migration
+class CreateMessagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,13 @@ class CreateMensagensTable extends Migration
      */
     public function up()
     {
-        Schema::create('mensagens', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('messages', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('from');
+            $table->bigInteger('to');
+            $table->text('message');
+            $table->text('link')->nullable();
+            $table->tinyInteger('is_read');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ class CreateMensagensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mensagens');
+        Schema::dropIfExists('messages');
     }
 }
