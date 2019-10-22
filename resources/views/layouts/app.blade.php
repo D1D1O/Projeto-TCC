@@ -204,9 +204,17 @@
             $(this).addClass('active');
 
             receiver_id = $(this).attr('id');
-            alert(receiver_id);
-        })
-    })
+            $.ajax({
+                type: "get",
+                url: "message/" + receiver_id,
+                data: "",
+                cache: false,
+                success: function(data){
+                    $('#messages').html(data); 
+                }
+            });
+        });
+    });
 
 </script>
 

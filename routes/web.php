@@ -19,6 +19,7 @@ Route::post('/create','testeController@store')->name('store');
 //ute::post('/store','alunController@store')->name('store.aluno');
 
 Route::post('/store/professor','ProfessorController@store')->name('store.professor');
+Route::get('/message/{id}', 'HomeController@getMessage')->name('message');
 
 
 
