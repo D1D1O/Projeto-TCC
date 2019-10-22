@@ -20,6 +20,7 @@ Route::post('/create','testeController@store')->name('store');
 
 Route::post('/store/professor','ProfessorController@store')->name('store.professor');
 Route::get('/message/{id}', 'HomeController@getMessage')->name('message');
+Route::post('/message', 'HomeController@sendMessage');
 
 
 

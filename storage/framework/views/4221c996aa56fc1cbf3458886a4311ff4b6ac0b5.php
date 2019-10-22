@@ -200,7 +200,15 @@
 
     var receiver_id = '';
     var my_id = '<?php echo e(Auth::id()); ?>';
+
     $(document).ready(function() {
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
         $('.user').click(function() {
             $('.user').removeClass('active');
             $(this).addClass('active');
@@ -215,6 +223,31 @@
                     $('#messages').html(data); 
                 }
             });
+        });
+        $(document).on('keyup','.input-text input',function(e){
+            var message = $(this).val();
+            
+            if(e.keyCode == 13 && message != '' && receiver_id != ''){
+                
+                $(this).val('');
+                var datastr ="receiver_id="+ receiver_id + "&message=" + message;
+                $.ajax({
+                    type:"post",
+                    url:"message",
+                    data: datastr,
+                    cache: false,
+                    success:function(data){
+
+                    },
+                    error: function(jqXHR, status, err){
+
+                    },
+                    complete:function(){
+
+                    }
+                })
+
+            }
         });
     });
 
