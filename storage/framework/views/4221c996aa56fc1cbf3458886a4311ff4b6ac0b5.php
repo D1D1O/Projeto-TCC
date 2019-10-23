@@ -268,6 +268,7 @@
             $('.user').click(function() {
                 $('.user').removeClass('active');
                 $(this).addClass('active');
+                $(this).find('.pending').remove();
 
                 receiver_id = $(this).attr('id');
                 $.ajax({
@@ -277,6 +278,7 @@
                     cache: false,
                     success: function(data) {
                         $('#messages').html(data);
+                        scrollToBottomFunc();
                     }
                 });
             });
@@ -293,19 +295,27 @@
                         data: datastr,
                         cache: false,
                         success: function(data) {
+                        
 
                         },
                         error: function(jqXHR, status, err) {
 
                         },
                         complete: function() {
-
+                            scrollToBottomFunc();
                         }
                     })
 
                 }
             });
         });
+
+        function scrollToBottomFunc(){
+            $('.message-wrapper').animate({
+                scrollTop: $('.message-wrapper').get(0).scrollHeight
+            },50);
+        }
+
     </script>
 
 

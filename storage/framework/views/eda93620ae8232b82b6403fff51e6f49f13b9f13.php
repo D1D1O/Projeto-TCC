@@ -39,6 +39,7 @@
 			position: relative;
 			margin-bottom: 10px;
 			border-left: solid 10px black;
+			margin-top: 15px;
 
 		}
 
@@ -88,7 +89,6 @@
 			max-width: 1000px;
 			height: 1000px;
 			margin: 0 auto 0 auto;
-			background-color: yellow;
 			position: relative;
 		}
 
@@ -106,7 +106,9 @@
 			width: 800px;
 			height: 721px;
 			float: right;
+			margin-top: 24px;
 		}
+		
 
 		.chat2 {
 			background-color: white;
