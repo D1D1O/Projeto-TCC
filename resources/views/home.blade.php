@@ -1,13 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.padrao')
 
 @section('content')
-
+ <!-- <meta name="csrf-token" content="{{ csrf_token() }}">  -->
 <div class="container">
     <div class="row">
         <div class="col-md-4">
             <div class="user-wrapper">
                 <ul class="users">
                     @foreach($users as $user)
+                    <div class="unip2">
+				
+			
                     <li class="user" id="{{ $user->id }}">
                         @if($user->unread)
                             <span class="pending">{{ $user->unread }}</span>
@@ -20,17 +23,20 @@
 
                             <div class="media-body">
                                 <p class="name">{{$user->name}}</p>
-                                <p class="email">{{$user->email}}</p>
+                                <p class="name">{{$user->id}}</p>
+                                <!-- <p class="email">{{$user->email}}</p> -->
                             </div>
 
                         </div>
                     </li>
+                    </div>
                     @endforeach
 
 
                 </ul>
             </div>
         </div>
+
 
         <div class="col-md-8" id="messages">
             

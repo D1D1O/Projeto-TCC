@@ -178,7 +178,7 @@ trait AuthenticatesUsers
         if($request->tipo == 'aluno'){
             $this->redirectTo = '/home';
         }else{
-            $this->redirectTo = '/t2';
+            $this->redirectTo = '/home';
         }
     }
 
