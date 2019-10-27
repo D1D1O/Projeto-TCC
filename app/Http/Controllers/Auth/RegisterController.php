@@ -85,6 +85,7 @@ class RegisterController extends Controller
             $aluno->id_user = $user->id;
             $aluno->nome =  $data['name'];
             $aluno->turma =  $data['turma'];
+            $aluno->id_professor =  $data['id_professor'];
             $aluno->save();
             $this->redirectTo = '/t1';
             return $user;

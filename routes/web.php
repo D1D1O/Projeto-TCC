@@ -28,8 +28,9 @@ Route::post('/message', 'HomeController@sendMessage');
 //rotas viwews 
 
 Route::view('/Login_aluno', 'sistema/Login_aluno')->name('Login_aluno');
-Route::view('/Cadastro_aluno', 'sistema/Cadastro_aluno')->name('Cadastro_aluno');
-
+Route::get('/Cadastro_aluno', 'AlunoController@index')->name('Cadastro_aluno');
+/* Route::view('/Cadastro_aluno', 'sistema/Cadastro_aluno')->name('Cadastro_aluno');
+ */
 Route::view('/Login_professor', 'sistema/Login_professor')->name('Login_professor');
 Route::view('/Cadastro_professor', 'sistema/Cadastro_professor')->name('Cadastro_professor');
 
@@ -42,4 +43,4 @@ Route::view('/t2', 'sistema/Tela_professor')->name('t2');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+ Route::get('/home', 'HomeController@index')->name('home'); 

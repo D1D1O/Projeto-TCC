@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Aluno;
 use App\User;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 
 class AlunoController extends Controller
 {
@@ -20,7 +22,13 @@ class AlunoController extends Controller
      }
     public function index()
     {
-        //
+        
+        $users = User::where('id', '!=', Auth::id())
+            ->where('tipo','=','professor')           
+            ->get();
+
+        return view('sistema.Cadastro_aluno', ['users' => $users]);
+
     }
 
    
