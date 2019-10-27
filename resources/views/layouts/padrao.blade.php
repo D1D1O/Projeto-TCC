@@ -1,22 +1,174 @@
 <!DOCTYPE html>
-<html lang="<?php echo e(app()->getLocale()); ?>">
+<html lang="{{ app()->getLocale() }}">
+<html lang="pt-br">
 
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
+
+
+	<link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title><?php echo e(config('app.name', 'Laravel')); ?></title>
+	
 
-    <!-- Styles -->
-    <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
+	<title>UniProjetos</title>
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
+</head>
 
-    <style>
-        /* width */
-        ::-webkit-scrollbar {
+
+	<style type="text/css">
+		body {
+			background-image: url(imagens/azul.jpg);
+            line-height: 15px;
+		}
+
+		.unip {
+
+			font-family: 'Oswald', sans-serif;
+			font-size: 30px;
+			text-align: center;
+			width: 180px;
+			height: 80px;
+			padding: 10px;
+			background-color: #dcd7d4;
+			position: relative;
+			border-left: solid 10px white;
+			margin: 0px 10px 10px 0px;
+            border-radius: 10px;
+		}
+
+		.unip2 {
+
+			
+			font-size: 15px;
+			text-align: center;
+			width: 97%;
+			height: 80px;
+			padding: 10px;
+			background-color: #dcd7d4;
+			position: relative;
+			margin-bottom: 10px;
+			border-left: solid 10px black;
+			margin-top: 15px;
+            border-radius: 23px;
+
+		}
+
+		.unip2:hover {
+
+			transform: scale(1.1);
+			transition: all 0.15s linear;
+
+		}
+
+		.nav {
+			width: 800px;
+			height: 80px;
+			background-color: #6692b3;
+			position: relative;
+			padding: 10px;
+			left: 200px;
+
+
+		}
+
+		.nome {
+			font-family: 'Oswald', sans-serif;
+			font-size: 20px;
+			color: white;
+			text-align: left;
+			padding: 10px;
+			width: 480px;
+			height: 65px;
+			margin-left: 10px;
+			background-color: #42474a;
+			position: relative;
+			border-top: solid 10px white;
+
+		}
+
+		.nome2 {
+			width: 280px;
+			height: 65px;
+			background-color: #42474a;
+			position: relative;
+			border-top: solid 10px white;
+
+		}
+
+		.principal {
+			max-width: 1000px;
+			height: 1000px;
+			margin: 0 auto 0 auto;
+			position: relative;
+		}
+
+		
+        .left1{
+            background-color: #1670a7;
+			width: 200px;
+			height: 104px;
+			padding: 10px;
+			position: absolute;
+			left: 0;
+        }
+
+        
+
+		.chat3 {
+			background-color: #959a9c;
+			width: 986px;
+			height: 721px;
+			float: right;
+			margin-top: 24px;
+            border-radius: 23px;
+		}
+		
+
+		.chat4 {
+			background-color: white;
+            border-radius: 23px;
+			width: 960px;
+			height: 690px;
+			position: relative;
+			left: 14px;
+			top: 14px;
+
+		}
+
+		.text1 {
+			background: #6692b3;
+			width: 800px;
+			height: 199px;
+			position: relative;
+			left: 102px;
+			clear: both;
+
+		}
+
+		.mensagem {
+			font-family: Andale Mono, monospace;
+			font-size: 20px;
+			color: white;
+		}
+
+		#sair {
+
+			float: right;
+		}
+
+        /* css do chat*/
+        /* css do chat*/
+        /* css do chat*/
+
+         /* width */
+         ::-webkit-scrollbar {
             width: 7px;
         }
 
@@ -52,6 +204,7 @@
 
         .user-wrapper {
             height: 600px;
+            border-radius: 23px;
         }
 
         .user {
@@ -154,61 +307,70 @@
         input[type=text]:focus {
             border: 1px solid #aaaaaa;
         }
-    </style>
+	</style>
 
 </head>
 
+
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                
+	<div class="principal">
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                     
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                                <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
-                            </a>
 
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a>
+		<div class="left1">
 
-                                    <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
-                                        <?php echo e(csrf_field()); ?>
+			<div class="unip">UniProjetos</div>
 
-                                    </form>
-                                </li>
-                            </ul>
-                        </li>
-                     
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
-        <?php echo $__env->yieldContent('content'); ?>
+		</div>
+ 
+		<div class="nav">
+			<span class="nome">{{ Auth::user()->tipo }} : {{ Auth::user()->name }}</span>
+
+
+			<span class="nome2">
+				<!--<a href="index.html" class="btn btn-primary" id="sair">	
+				Sair
+			</a>-->
+
+				<a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();" class="btn btn-primary" id="sair">
+					Sair
+				</a>
+				<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+					{{ csrf_field() }}
+				</form>
+
+			</span>
+
+		</div>
+
+		<div class="chat3">
+			<div class="chat4">
+                @yield('content')
+			</div>
+
+		</div>
+
+		<div class="text1">
+
+			<center class="mensagem">Mensagem:</center>
+			<center><textarea class="msg" cols="80" rows="3"></textarea></center>
+
+			<center><input id="file" name="file" type="file" class="btn btn-light" />&nbsp;&nbsp;<button class="btn btn-light">Enviar</button></center>
+
+
+		</div>
+
+
+
     </div>
-
-
-
     
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
 
     <script>
         var receiver_id = '';
-        var my_id = '<?php echo e(Auth::id()); ?>';
+        var my_id = '{{ Auth::id() }}';
 
         $(document).ready(function() {
 
@@ -253,6 +415,8 @@
                 $(this).find('.pending').remove();
 
                 receiver_id = $(this).attr('id');
+                /* alert(receiver_id); */
+
                 $.ajax({
                     type: "get",
                     url: "message/" + receiver_id,
@@ -264,13 +428,17 @@
                     }
                 });
             });
+
             $(document).on('keyup', '.input-text input', function(e) {
+
                 var message = $(this).val();
 
                 if (e.keyCode == 13 && message != '' && receiver_id != '') {
 
                     $(this).val('');
+
                     var datastr = "receiver_id=" + receiver_id + "&message=" + message;
+
                     $.ajax({
                         type: "post",
                         url: "message",
@@ -302,7 +470,19 @@
 
 
     <!-- Scripts -->
-    <script src="<?php echo e(asset('js/app.js')); ?>"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+
+
+
+
+
+
+
+
+
+
 </body>
 
-</html>
+
+
+		
