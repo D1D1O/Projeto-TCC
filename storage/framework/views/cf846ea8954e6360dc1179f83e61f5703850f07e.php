@@ -52,6 +52,9 @@
 			margin-left: 15px;
 			margin-right: 15px;
 		}
+		.msg{
+			width: 100%;
+		}
 	</style>
 
 </head>

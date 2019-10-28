@@ -22,7 +22,7 @@ class CreateAlunosTable extends Migration
             $table->string('status',20)->nullable();
 
             $table->foreign('id_user')->references('id')->on('users');
-            $table->foreign('id_professor')->references('id')->on('professores');
+            $table->foreign('id_professor')->references('id_user')->on('professores');
             $table->timestamps();
         });
     }

@@ -87,7 +87,7 @@ class RegisterController extends Controller
             $aluno->turma =  $data['turma'];
             $aluno->id_professor =  $data['id_professor'];
             $aluno->save();
-            $this->redirectTo = '/t1';
+            $this->redirectTo = '/home';
             return $user;
         }
         if ($data['tipo'] == 'professor') {
@@ -97,7 +97,7 @@ class RegisterController extends Controller
             $professor->descricao =  $data['descricao'];
             $professor->save();
             
-            $this->redirectTo = '/t2';
+            $this->redirectTo = '/home';
             //$this->redirectTo = '/t2';
             return $user;
         }

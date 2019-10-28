@@ -134,8 +134,7 @@
 
 				<div class="form-group">
 					<div class="Ctext">
-						<input type="text" class="form-control" name="turma" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Turma" value="<?php echo e(old('turma')); ?>">
-						<small id="emailHelp" class="form-text text-muted"></small>
+						<input type="text" class="form-control" name="turma" id=""  placeholder="Turma" value="<?php echo e(old('turma')); ?>">
 					</div>
 
 				</div>
@@ -148,7 +147,7 @@
 
 						<option selected>Escolher...</option>
 						<?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-							<option name="id_professor" value="<?php echo e($user->id); ?>"> <?php echo e($user->name); ?> </option>
+							<option name="id_professor" value="<?php echo e($user->id); ?>"> <?php echo e($user->name); ?> <?php echo e($user->id); ?> </option>
 						<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 					</select>

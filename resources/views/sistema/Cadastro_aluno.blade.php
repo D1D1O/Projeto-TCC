@@ -133,8 +133,7 @@
 
 				<div class="form-group">
 					<div class="Ctext">
-						<input type="text" class="form-control" name="turma" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Turma" value="{{ old('turma') }}">
-						<small id="emailHelp" class="form-text text-muted"></small>
+						<input type="text" class="form-control" name="turma" id=""  placeholder="Turma" value="{{ old('turma') }}">
 					</div>
 
 				</div>
@@ -147,7 +146,7 @@
 
 						<option selected>Escolher...</option>
 						@foreach($users as $user)
-							<option name="id_professor" value="{{$user->id}}"> {{$user->name}} </option>
+							<option name="id_professor" value="{{$user->id}}"> {{$user->name}} {{$user->id}} </option>
 						@endforeach
 
 					</select>
