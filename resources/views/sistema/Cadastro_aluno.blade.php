@@ -146,7 +146,7 @@
 
 						<option selected>Escolher...</option>
 						@foreach($users as $user)
-							<option name="id_professor" value="{{$user->id}}"> {{$user->name}} {{$user->id}} </option>
+							<option name="id_professor" value="{{$user->id}}"> {{$user->name}} </option>
 						@endforeach
 
 					</select>

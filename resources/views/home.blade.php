@@ -23,8 +23,8 @@
 
                             <div class="media-body">
                                 <p class="name">{{$user->name}}</p>
-                                <p class="name">{{$user->id}}</p>
-                                <!-- <p class="email">{{$user->email}}</p> -->
+                               <!--  <p class="name">{{$user->id}}</p> -->
+                                <p class="email">{{$user->email}}</p> 
                             </div>
 
                         </div>

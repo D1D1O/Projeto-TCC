@@ -253,6 +253,7 @@
             padding: 10px;
             height: 536px;
             background: #eeeeee;
+            border-radius: 17px;
         }
 
         .messages .message {

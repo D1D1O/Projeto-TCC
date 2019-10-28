@@ -21,8 +21,8 @@
 
                             <div class="media-body">
                                 <p class="name"><?php echo e($user->name); ?></p>
-                                <p class="name"><?php echo e($user->id); ?></p>
-                                <!-- <p class="email"><?php echo e($user->email); ?></p> -->
+                               <!--  <p class="name"><?php echo e($user->id); ?></p> -->
+                                <p class="email"><?php echo e($user->email); ?></p> 
                             </div>
 
                         </div>
