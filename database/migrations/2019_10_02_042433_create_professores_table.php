@@ -16,6 +16,7 @@ class CreateProfessoresTable extends Migration
         Schema::create('professores', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_user')->unsigned();
+            $table->integer('matricula')->unique();
             $table->string('nome', 60);
             $table->text('descricao');
             $table->foreign('id_user')->references('id')->on('users');
