@@ -81,13 +81,13 @@
 					</div>
 
 				</div>
-				<div class="form-group">
+			<!-- 	Matricula <div class="form-group">
 
 					<div class="Ctext">
 						<input type="text" class="form-control" id="InputMatricula" name="matricula" placeholder="Matricula">
 					</div>
 
-				</div>
+				</div> -->
 
 				<div class="form-group">
 

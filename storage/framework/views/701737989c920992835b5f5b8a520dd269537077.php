@@ -111,14 +111,14 @@
 					</div>
 				</div>
 
-				<div class="form-group">
+				<!-- matricula <div class="form-group">
 
 					<div class="Ctext">
 
 						<input type="text" class="form-control" name="matricula" id="exampleInputPassword1" placeholder="Matricula" value="<?php echo e(old('matricula')); ?>">
 					</div>
 
-				</div>
+				</div> -->
 				<div class="form-group">
 
 					<div class="Ctext">
@@ -139,7 +139,7 @@
 
 				</div>
 
-				<div class="input-group mb-3">
+				<!-- dropdonw Professor   <div class="input-group mb-3">
 					<div class="input-group-prepend">
 						<label class="input-group-text" for="inputGroupSelect01">orientador :</label>
 					</div>
@@ -151,7 +151,7 @@
 						<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 					</select>
-				</div>
+				</div> -->
 
 
 				<div class="form-group">
