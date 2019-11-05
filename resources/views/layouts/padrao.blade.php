@@ -354,8 +354,8 @@
 
 		<div class="text1">
 
-			<center class="mensagem">Mensagem:</center>
-			<center><textarea class="msg" cols="80" rows="3"></textarea></center>
+			<!-- <center class="mensagem">Mensagem:</center>
+			<center><textarea class="msg" cols="80" rows="3"></textarea></center> -->
 
 			<center><input id="file" name="file" type="file" class="btn btn-light" />&nbsp;&nbsp;<button class="btn btn-light">Enviar</button></center>
 
