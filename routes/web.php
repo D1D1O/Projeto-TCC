@@ -33,6 +33,7 @@ Route::get('/solicitacao', 'SolicitacaoController@index')->name('Solicitacao');
 
 Route::get('/Cadastro_professor', 'ProfessorController@index')->name('Cadastro_professor');
 /* Route::view('/Cadastro_professor', 'sistema/Cadastro_professor')->name('Cadastro_professor'); */
+Route::post('/solicitacao/solitar', 'SolicitacaoController@cadSoliticao')->name('Solicitar');
 
 Route::view('/Login_professor', 'sistema/Login_professor')->name('Login_professor');
 

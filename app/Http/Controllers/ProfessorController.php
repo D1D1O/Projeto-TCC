@@ -38,6 +38,7 @@ class ProfessorController extends Controller
         $sexos = DB::table('sexo')->get();
 
         return view('sistema.Cadastro_professor', ['sexos' => $sexos] );
+        
     }
 
 }
