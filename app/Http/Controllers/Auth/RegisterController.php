@@ -89,6 +89,7 @@ class RegisterController extends Controller
             $professor->id_user = $user->id;
             $professor->matricula = $user->id;
             $professor->nome =  $data['name'];
+            $professor->id_sexo = $data['id_sexo'];
             $professor->descricao =  $data['descricao'];
             $professor->save();
             

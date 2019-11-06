@@ -55,6 +55,10 @@
 		.msg{
 			width: 100%;
 		}
+		.input-group{
+			width: 92%;
+    		margin-left: 15px;
+		}
 	</style>
 
 </head>
@@ -117,6 +121,19 @@
 						<small id="emailHelp" class="form-text text-muted"></small>
 					</div>
 
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<label class="input-group-text" for="inputGroupSelect01">Sexo :</label>
+					</div>
+					<select name="id_sexo" class="custom-select ori" id="inputGroupSelect01">
+
+						<option selected>Escolher...</option>
+						@foreach($sexos as $sexo)
+							<option name="id_sexo" value="{{$sexo->id}}"> {{$sexo->sexo}} </option>
+						@endforeach
+
+					</select>
 				</div>
 
 				<div class="form-group">

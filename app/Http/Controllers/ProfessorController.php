@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Professor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProfessorController extends Controller
 {
@@ -30,6 +31,13 @@ class ProfessorController extends Controller
 
         //return view('sistema.Index');
         
+    }
+
+    public function index(){
+
+        $sexos = DB::table('sexo')->get();
+
+        return view('sistema.Cadastro_professor', ['sexos' => $sexos] );
     }
 
 }
