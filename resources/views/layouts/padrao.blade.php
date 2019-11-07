@@ -34,7 +34,7 @@
 			font-size: 30px;
 			text-align: center;
 			width: 180px;
-			height: 80px;
+			height: 116px;
 			padding: 10px;
 			background-color: #dcd7d4;
 			position: relative;
@@ -113,10 +113,11 @@
         .left1{
             background-color: #1670a7;
 			width: 200px;
-			height: 104px;
+			height: 135px;
 			padding: 10px;
 			position: absolute;
 			left: 0;
+            
         }
 
         
@@ -128,6 +129,7 @@
 			float: right;
 			margin-top: 24px;
             border-radius: 23px;
+            margin-top: 60px;
 		}
 		
 
@@ -308,6 +310,10 @@
         input[type=text]:focus {
             border: 1px solid #aaaaaa;
         }
+        #so{
+            margin-top: 32px;
+            width: 147px;
+        }
 	</style>
 
 </head>
@@ -319,7 +325,17 @@
 
 		<div class="left1">
 
-			<div class="unip">UniProjetos</div>
+            <div class="unip">UniProjetos
+
+            
+                <a id="so" href="{{route('Solicitacao')}}" class="btn btn-primary">
+						Solicitar orientador
+                </a>    
+            
+            </div>
+            
+
+            
 
 
 		</div>
