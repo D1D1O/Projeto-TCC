@@ -91,10 +91,12 @@
         .card-img-top {
             height: 190px;
         }
-        .btn-fo{
+
+        .btn-fo {
             margin: 0px 10px 0px 10px;
         }
-        .org{
+
+        .org {
             margin-left: 31%;
         }
     </style>
@@ -103,89 +105,18 @@
 
 <body>
 
-
-
     <div class="principal">
 
 
         <div class="container">
-            <div class="row">
-
-            @foreach($users as $user)
-
-
-            @if (($user->id_sexo) == 1)
-                @php
-                    $url = 'imagens/professor.png'
-                @endphp
-            @elseif (($user->id_sexo) == 2)
-                @php
-                    $url = 'imagens/professora.png'
-                @endphp
-            @else
-                @php
-                    $url = 'imagens/professora.png'
-                @endphp
-            @endif
-            <form method="POST" action="{{ route('Solicitar') }}">
-            {{ csrf_field() }}
-                <div class="col-sm comp">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{$url}}" width="100px" alt="Imagem de capa do card">
-                        <div class="card-body">
-                            <h5 class="card-title">{{$user->nome}}</h5>
-                            <p class="card-text">{{$user->descricao}}</p>
-                <INPUT TYPE="hidden" NAME="id_professor" VALUE="{{$user->id_user}}">
-                <INPUT TYPE="hidden" NAME="id_auth" VALUE="{{Auth::id()}}">
-                            <div class="row">
-                                <div class="org">
-                                    <!-- <a href="#" class="btn btn-primary btn-fo">Solicitar</a> -->
-                                    <button type="submit" class="btn btn-primary">Solicitar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <!-- <INPUT TYPE="hidden" NAME="id_auth" VALUE="{{ Auth::id() }}"> -->
-                
-            </form>
-            @endforeach
-
-
-                
-
+            <div class="alert alert-warning" role="alert">
+                Voce nao possui solicitações de orientação.<br>
+                volte para pagina anterior.
             </div>
+
         </div>
 
     </div>
-    <script>
-        /* $('.btn-primary').click(function(obj) {
-            var receiver_id = '';
-            var my_id = '{{ Auth::id() }}'; */
-            /* var receiver_id = $(this).attr('id'); */
-            /* var prfe_id = obj.id;
-            var ID = $(obj).attr("id");
-            var receiver_id = $(this).data("id");
-
-
-                console.log(my_id); */
-                /* alert(receiver_id); */
-
-               /*  $.ajax({
-                    type: "get",
-                    url: "message/" + receiver_id,
-                    data: "",
-                    cache: false,
-                    success: function(data) {
-                        $('#messages').html(data);
-                        scrollToBottomFunc();
-                    }
-                }); */
-            });
-    </Script>
-
 
 </body>
 

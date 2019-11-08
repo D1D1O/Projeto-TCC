@@ -326,23 +326,15 @@
 		<div class="left1">
 
             <div class="unip">UniProjetos
-  
-            @if (Auth::user()->tipo == 'aluno')
+
                 <a id="so" href="{{route('Solicitacao')}}" class="btn btn-primary">
 						Solicitar orientador
                 </a> 
-            @endif
-
-
-            @if (Auth::user()->tipo == 'professor')
-                <a id="so" href="{{route('Verificar')}}" class="btn btn-primary">
-						verificar solicitações
-                </a>
-            @endif   
-            
                 
 
-                <!-- <button type="button" class="btn btn-warning" id="o">verificar solicitações</button> -->  
+                 <a id="o" href="{{route('Solicitacao')}}" class="btn btn-primary">
+						verificar solicitações
+                </a>    
                
             </div>
             
@@ -408,6 +400,10 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
+
+           
+            
+        
 
             // Enable pusher logging - don't include this in production
             Pusher.logToConsole = true;

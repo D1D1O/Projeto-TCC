@@ -31,24 +31,13 @@ class HomeController extends Controller
     {
             /* $users = User::where('id', '!=', Auth::id())->get();
             return view('home', ['users' => $users]);    */
- 
 
-
-            if (Auth::user()->tipo == 'professor') {
-
-            /*  $users = User::where('alunos.id_professor', '=', Auth::id())
-                ->join('alunos', 'alunos.id_user', '=', 'users.id')
-                ->get(); */
+        if (Auth::user()->tipo == 'professor') {
 
             $users = Aluno::where('alunos.id_professor', '=', Auth::id())
                 ->join('users', 'alunos.id_user', '=', 'users.id')
                 ->get();
-
             return view('home', ['users' => $users]); 
-
-
-              
-
         }
 
         if (Auth::user()->tipo == 'aluno') {
@@ -66,6 +55,7 @@ class HomeController extends Controller
 
             return view('home', ['users' => $users]);
         }  
+
     }
 
 
