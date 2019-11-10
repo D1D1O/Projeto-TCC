@@ -151,7 +151,7 @@
 				<div id="fonte">
 					<INPUT TYPE="hidden" NAME="tipo" VALUE="professor">
 					
-					<button type="submit" class="btn btn-primary">Cadastrar</button>
+					<button type="submit" class="btn btn-primary">Realizar Cadastro</button>
 				</div>
 			</form>
 			<?php if($errors->any()): ?>

@@ -173,7 +173,7 @@
 
 
 				<div id="fonte">
-					<button type="submit" class="btn btn-primary">Cadastrar</button>
+					<button type="submit" class="btn btn-primary">Realizar Cadastro</button>
 				</div>
 
 			</form>
