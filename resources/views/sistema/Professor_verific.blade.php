@@ -99,12 +99,6 @@
         .org {
             margin-left: 31%;
         }
-        div.row{
-            margin-left: -64px;
-        }
-        .card-title{
-            text-align: center;
-        }
     </style>
 
 </head>
@@ -119,47 +113,70 @@
         <div class="container">
             <div class="row">
 
-                @foreach($users as $user)
-                @foreach($user as $u)
-
-
-
                 <form method="POST" action="{{ route('RespProfessor') }}">
                     {{ csrf_field() }}
+                    <div>
 
-                    <div class="col-sm comp">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="imagens/student.png" width="100px" alt="Representa aluno">
-                            <div class="card-body">
-                                <h5  class="card-title">{{$u->name}}</h5>
-                                <INPUT TYPE="hidden" NAME="id_aluno" VALUE="{{$u->id}}">
-                                <INPUT TYPE="hidden" NAME="id_professor" VALUE="{{Auth::id()}}">
-                                <div class="row">
-                                    <div class="org">
+                        @foreach($users as $user)
+
+                        @foreach($user as $u)
+
+                        <div class="col">
+
+                            <div class="shadow-lg p-3 mb-5 bg-white rounded">{{$u->name}}
+                                <div class="shadow-lg p-3 mb-5 bg-white rounded">{{$u->id}}
+                                    <?php
+                                    $d = $u->id;
+                                    $$d = $u->id;
+                                    ?>
+                                    {{$$d}}
+
+                                    <INPUT TYPE="hidden" NAME="id_aluno" VALUE="{{$$d}}">
+
+                                    <INPUT TYPE="hidden" NAME="id_professor" VALUE="{{Auth::id()}}">
+
                                     <button class="btn btn-primary" name="resp1" value="1" type="submit">Aceitar</button>
                                     <button class="btn btn-primary" name="resp0" value="0" type="submit">Não aceitar</button>
-                            
-                                    </div>
                                 </div>
                             </div>
+
+                            <br><br>
+
+                            @endforeach
+                            @endforeach
                         </div>
-                    </div>
-
-
-                    <!-- <INPUT TYPE="hidden" NAME="id_auth" VALUE="{{ Auth::id() }}"> -->
-
                 </form>
-
-                @endforeach
-                @endforeach
-
-
-
 
             </div>
         </div>
 
     </div>
+    <script>
+        /* $('.btn-primary').click(function(obj) {
+            var receiver_id = '';
+            var my_id = '{{ Auth::id() }}'; */
+        /* var receiver_id = $(this).attr('id'); */
+        /* var prfe_id = obj.id;
+        var ID = $(obj).attr("id");
+        var receiver_id = $(this).data("id");
+
+
+            console.log(my_id); */
+        /* alert(receiver_id); */
+
+        /*  $.ajax({
+             type: "get",
+             url: "message/" + receiver_id,
+             data: "",
+             cache: false,
+             success: function(data) {
+                 $('#messages').html(data);
+                 scrollToBottomFunc();
+             }
+         }); */
+        });
+    </Script>
+
 
 </body>
 

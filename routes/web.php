@@ -44,7 +44,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home'); 
 
-Route::post('/respProfessor', 'SolicitacaoController@Resp')->name('RespProfessor');
+Route::post('/respProfessor', 'SolicitacaoController@RespProfessor')->name('RespProfessor');
 
 /* Route::get('/getRequest/{id}',function(){
   if(Request::ajax()){

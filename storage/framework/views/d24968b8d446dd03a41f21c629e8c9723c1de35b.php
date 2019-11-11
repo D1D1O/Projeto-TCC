@@ -15,8 +15,11 @@
                         <?php endif; ?> 
                         <div class="media">
 
-                            <div class="media-left">
-                                <img src="<?php echo e($user->avatar); ?>" alt="" class="media-object">
+                            <!-- <div class="media-left">
+                                <img src="<?php echo e($user->avatar); ?>" alt="" class="media-object"> Abrir Chat
+                            </div> -->
+                            <div class="ac">
+                                Abrir Chat
                             </div>
 
                             <div class="media-body">

@@ -217,6 +217,7 @@
 
         .user:hover {
             background: #eeeeee;
+            border-radius: 11px;
         }
 
         .user:last-child {
@@ -226,7 +227,7 @@
         .pending {
             position: absolute;
             left: 4px;
-            top: 18px;
+            top: 3px;
             background: #b600ff;
             margin: 0;
             border-radius: 50%;
@@ -314,12 +315,26 @@
             margin-top: 32px;
             width: 147px;
         }
+        .alert{
+            text-align: center;
+        }
+        .ac{
+            margin-top: 8%;
+            font-size: 82%;
+        }
 	</style>
 
 </head>
 
 
 <body>
+@if(session('status'))
+	<div class="alert alert-warning">
+
+    {{ session('status') }}
+
+	</div>	
+@endif
 	<div class="principal">
 
 
