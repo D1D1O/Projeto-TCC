@@ -147,11 +147,11 @@
 				<div id="fonte">
 
 					<button type="submit" class="btn btn-primary">
-						Login
+					Fazer Login
 					</button>
 
 					<a href="<?php echo e(route('Cadastro_aluno')); ?>" class="btn btn-primary">
-						Cadastre-se
+						Realizar Cadastro
 					</a>
 				</div>
 			</form>

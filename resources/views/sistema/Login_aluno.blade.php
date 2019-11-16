@@ -218,16 +218,20 @@ div.alert.alert-succes{
 				<div id="fonte">
 
 					<button type="submit" class="btn btn-primary">
-						Login
+					Fazer Login
 					</button>
 
 					<a href="{{route('Cadastro_aluno')}}" class="btn btn-primary">
+<<<<<<< HEAD
 						Cadastre-se
 <<<<<<< HEAD
 					   </a>
 					   <INPUT TYPE="hidden" NAME="tipo" VALUE="aluno">
 				    </div>
 =======
+=======
+						Realizar Cadastro
+>>>>>>> desenvolvimento
 					</a>
 				</div>
 >>>>>>> desenvolvimento

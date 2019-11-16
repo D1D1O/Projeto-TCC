@@ -111,14 +111,14 @@
 					</div>
 				</div>
 
-				<div class="form-group">
+				<!-- matricula <div class="form-group">
 
 					<div class="Ctext">
 
 						<input type="text" class="form-control" name="matricula" id="exampleInputPassword1" placeholder="Matricula" value="<?php echo e(old('matricula')); ?>">
 					</div>
 
-				</div>
+				</div> -->
 				<div class="form-group">
 
 					<div class="Ctext">
@@ -134,13 +134,12 @@
 
 				<div class="form-group">
 					<div class="Ctext">
-						<input type="text" class="form-control" name="turma" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Turma" value="<?php echo e(old('turma')); ?>">
-						<small id="emailHelp" class="form-text text-muted"></small>
+						<input type="text" class="form-control" name="turma" id=""  placeholder="Turma" value="<?php echo e(old('turma')); ?>">
 					</div>
 
 				</div>
 
-				<div class="input-group mb-3">
+				<!-- dropdonw Professor   <div class="input-group mb-3">
 					<div class="input-group-prepend">
 						<label class="input-group-text" for="inputGroupSelect01">orientador :</label>
 					</div>
@@ -152,7 +151,7 @@
 						<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 					</select>
-				</div>
+				</div> -->
 
 
 				<div class="form-group">
@@ -175,7 +174,7 @@
 
 
 				<div id="fonte">
-					<button type="submit" class="btn btn-primary">Cadastrar</button>
+					<button type="submit" class="btn btn-primary">Realizar Cadastro</button>
 				</div>
 
 			</form>

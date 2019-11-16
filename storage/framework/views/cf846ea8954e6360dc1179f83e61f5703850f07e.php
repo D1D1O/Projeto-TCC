@@ -52,6 +52,13 @@
 			margin-left: 15px;
 			margin-right: 15px;
 		}
+		.msg{
+			width: 100%;
+		}
+		.input-group{
+			width: 92%;
+    		margin-left: 15px;
+		}
 	</style>
 
 </head>
@@ -78,13 +85,13 @@
 					</div>
 
 				</div>
-				<div class="form-group">
+			<!-- 	Matricula <div class="form-group">
 
 					<div class="Ctext">
 						<input type="text" class="form-control" id="InputMatricula" name="matricula" placeholder="Matricula">
 					</div>
 
-				</div>
+				</div> -->
 
 				<div class="form-group">
 
@@ -116,6 +123,19 @@
 					</div>
 
 				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<label class="input-group-text" for="inputGroupSelect01">Sexo :</label>
+					</div>
+					<select name="id_sexo" class="custom-select ori" id="inputGroupSelect01">
+
+						<option selected>Escolher...</option>
+						<?php $__currentLoopData = $sexos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sexo): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+							<option name="id_sexo" value="<?php echo e($sexo->id); ?>"> <?php echo e($sexo->sexo); ?> </option>
+						<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+					</select>
+				</div>
 
 				<div class="form-group">
 
@@ -131,7 +151,7 @@
 				<div id="fonte">
 					<INPUT TYPE="hidden" NAME="tipo" VALUE="professor">
 					
-					<button type="submit" class="btn btn-primary">Cadastrar</button>
+					<button type="submit" class="btn btn-primary">Realizar Cadastro</button>
 				</div>
 			</form>
 			<?php if($errors->any()): ?>

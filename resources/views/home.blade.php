@@ -17,14 +17,17 @@
                         @endif 
                         <div class="media">
 
-                            <div class="media-left">
-                                <img src="{{$user->avatar}}" alt="" class="media-object">
+                            <!-- <div class="media-left">
+                                <img src="{{$user->avatar}}" alt="" class="media-object"> Abrir Chat
+                            </div> -->
+                            <div class="ac">
+                                Abrir Chat
                             </div>
 
                             <div class="media-body">
                                 <p class="name">{{$user->name}}</p>
-                                <p class="name">{{$user->id}}</p>
-                                <!-- <p class="email">{{$user->email}}</p> -->
+                               <!--  <p class="name">{{$user->id}}</p> -->
+                                <p class="email">{{$user->email}}</p> 
                             </div>
 
                         </div>

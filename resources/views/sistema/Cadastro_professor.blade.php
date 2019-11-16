@@ -82,6 +82,13 @@
 			margin-left: 15px;
 			margin-right: 15px;
 		}
+		.msg{
+			width: 100%;
+		}
+		.input-group{
+			width: 92%;
+    		margin-left: 15px;
+		}
 	</style>
 
 </head>
@@ -135,13 +142,13 @@
 					</div>
 
 				</div>
-				<div class="form-group">
+			<!-- 	Matricula <div class="form-group">
 
 					<div class="Ctext">
 						<input type="text" class="form-control" id="InputMatricula" name="matricula" placeholder="Matricula">
 					</div>
 
-				</div>
+				</div> -->
 
 				<div class="form-group">
 
@@ -174,6 +181,19 @@
 					</div>
 
 				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<label class="input-group-text" for="inputGroupSelect01">Sexo :</label>
+					</div>
+					<select name="id_sexo" class="custom-select ori" id="inputGroupSelect01">
+
+						<option selected>Escolher...</option>
+						@foreach($sexos as $sexo)
+							<option name="id_sexo" value="{{$sexo->id}}"> {{$sexo->sexo}} </option>
+						@endforeach
+
+					</select>
+				</div>
 
 				<div class="form-group">
 
@@ -194,7 +214,7 @@
 			</form>
 =======
 					
-					<button type="submit" class="btn btn-primary">Cadastrar</button>
+					<button type="submit" class="btn btn-primary">Realizar Cadastro</button>
 				</div>
 			</form>
 			@if ($errors->any())

@@ -217,7 +217,6 @@
 
         .user:hover {
             background: #eeeeee;
-            border-radius: 11px;
         }
 
         .user:last-child {
@@ -227,7 +226,7 @@
         .pending {
             position: absolute;
             left: 4px;
-            top: 3px;
+            top: 18px;
             background: #b600ff;
             margin: 0;
             border-radius: 50%;
@@ -315,49 +314,27 @@
             margin-top: 32px;
             width: 147px;
         }
-        .alert{
-            text-align: center;
-        }
-        .ac{
-            margin-top: 8%;
-            font-size: 82%;
-        }
 	</style>
 
 </head>
 
 
 <body>
-@if(session('status'))
-	<div class="alert alert-warning">
-
-    {{ session('status') }}
-
-	</div>	
-@endif
 	<div class="principal">
 
 
 		<div class="left1">
 
             <div class="unip">UniProjetos
-  
-            @if (Auth::user()->tipo == 'aluno')
+
                 <a id="so" href="{{route('Solicitacao')}}" class="btn btn-primary">
 						Solicitar orientador
                 </a> 
-            @endif
-
-
-            @if (Auth::user()->tipo == 'professor')
-                <a id="so" href="{{route('Verificar')}}" class="btn btn-primary">
-						verificar solicitações
-                </a>
-            @endif   
-            
                 
 
-                <!-- <button type="button" class="btn btn-warning" id="o">verificar solicitações</button> -->  
+                 <a id="o" href="{{route('Solicitacao')}}" class="btn btn-primary">
+						verificar solicitações
+                </a>    
                
             </div>
             
@@ -395,12 +372,12 @@
 
 		</div>
 
-		<div class="">
+		<div class="text1">
 
 			<!-- <center class="mensagem">Mensagem:</center>
 			<center><textarea class="msg" cols="80" rows="3"></textarea></center> -->
 
-			<center><input id="file" name="file" type="file" class="btn btn-light" />&nbsp;&nbsp;<button class="btn btn-light">Anexar Arquivo</button></center>
+			<center><input id="file" name="file" type="file" class="btn btn-light" />&nbsp;&nbsp;<button class="btn btn-light">Enviar</button></center>
 
 
 		</div>
@@ -423,6 +400,10 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
+
+           
+            
+        
 
             // Enable pusher logging - don't include this in production
             Pusher.logToConsole = true;

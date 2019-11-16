@@ -66,16 +66,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data )
     {
-        /* return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);*/
 
         $user = new User;
         $user->name = $data['name'];
         $user->email = $data['email'];
-        $user->matricula = $data['matricula'];
         $user->tipo = $data['tipo'];
         $user->password = bcrypt($data['password']);
         $user->save();
@@ -83,21 +77,23 @@ class RegisterController extends Controller
         if ($data['tipo'] == 'aluno') {
             $aluno = new Aluno;
             $aluno->id_user = $user->id;
-            $aluno->nome =  $data['name'];
+            $aluno->nome = $data['name'];
+            $aluno->matricula = $user->id;
             $aluno->turma =  $data['turma'];
-            $aluno->id_professor =  $data['id_professor'];
             $aluno->save();
-            $this->redirectTo = '/t1';
+            $this->redirectTo = '/home';
             return $user;
         }
         if ($data['tipo'] == 'professor') {
             $professor = new Professor;
             $professor->id_user = $user->id;
+            $professor->matricula = $user->id;
             $professor->nome =  $data['name'];
+            $professor->id_sexo = $data['id_sexo'];
             $professor->descricao =  $data['descricao'];
             $professor->save();
             
-            $this->redirectTo = '/t2';
+            $this->redirectTo = '/home';
             //$this->redirectTo = '/t2';
             return $user;
         }
